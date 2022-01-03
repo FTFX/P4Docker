@@ -3,7 +3,7 @@ FROM ubuntu:focal
 # Perforce Helix Core Server version
 ARG MAJOR_VERSION=2021
 ARG MINOR_VERSION=2
-ARG PATCH_VERSION=2201121
+ARG PATCH_VERSION=2220431
 
 # Environment variables
 ENV P4PORT=ssl:1666
@@ -23,6 +23,9 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y helix-p4d=${MAJOR_VERSION}.${MINOR_VERSION}-${PATCH_VERSION}~focal && \
     echo "${MAJOR_VERSION}.${MINOR_VERSION}-${PATCH_VERSION}" > /var/run/P4D.VERSION && \
+    apt-get remove -y wget gnupg && \
+    apt-get autoremove -y && \
+    apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy the script and allow it to run
