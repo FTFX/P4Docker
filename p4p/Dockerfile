@@ -13,6 +13,7 @@ ENV P4PROOT=/srv/p4p/root/
 ENV P4LOG=/srv/p4p/logs/log
 ENV P4SSLDIR=/srv/p4p/ssl/
 ENV SERVICE_USER=proxy
+ENV ALWAYS_TRUST_P4D=false
 
 # Install packages
 RUN apt-get update && \
