@@ -30,7 +30,7 @@ RUN apt-get update && \
     apt-get install -y helix-swarm=${MAJOR_VERSION}.${MINOR_VERSION}-${PATCH_VERSION}~focal && \
     apt-get install -y helix-swarm-optional=${MAJOR_VERSION}.${MINOR_VERSION}-${PATCH_VERSION}~focal && \
     echo "${MAJOR_VERSION}.${MINOR_VERSION}-${PATCH_VERSION}" > /var/run/P4S.VERSION && \
-    apt-get remove -y wget gnupg && \
+    apt-get remove -y gnupg && \
     apt-get autoremove -y && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
