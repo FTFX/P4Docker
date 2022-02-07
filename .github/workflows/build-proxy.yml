@@ -9,13 +9,13 @@ on:
   push:
     branches: [ main ]
     paths:
-      - '/proxy/**'
-      - '/.github/workflows/build-proxy.yml'
+      - 'proxy/**'
+      - '.github/workflows/build-proxy.yml'
   pull_request:
     branches: [ main ]
     paths:
-      - '/proxy/**'
-      - '/.github/workflows/build-proxy.yml'
+      - 'proxy/**'
+      - '.github/workflows/build-proxy.yml'
 
 env:
   # Use docker.io for Docker Hub if empty

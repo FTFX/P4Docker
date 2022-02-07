@@ -9,13 +9,13 @@ on:
   push:
     branches: [ main ]
     paths:
-      - '/swarm/**'
-      - '/.github/workflows/build-swarm.yml'
+      - 'swarm/**'
+      - '.github/workflows/build-swarm.yml'
   pull_request:
     branches: [ main ]
     paths:
-      - '/swarm/**'
-      - '/.github/workflows/build-swarm.yml'
+      - 'swarm/**'
+      - '.github/workflows/build-swarm.yml'
 
 
 env:
